@@ -1,5 +1,6 @@
 import React from 'react';
 import questions from "./Questions";
+import "./Question.css"
 
 class Question extends React.Component {
   constructor(){
