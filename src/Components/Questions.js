@@ -6,7 +6,7 @@ const questions = [
   },
   {
     question: "Pick Your Preference:",
-    answers: ["Green Tea", "English Breakfast"],
+    answers: ["Green Tea" ,"English Breakfast"],
     identifier: "tea_preference"
   },
   {
