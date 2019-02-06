@@ -15,14 +15,14 @@ class Question extends React.Component {
     }
   }
 
-  handleSubmit = (e) =>
+  handleSubmit = (e) => {
     e.preventDefault()
     this.props.addAnswer(this.state.selection)
     let next = Number(this.props.match.params.number)+1
     if(next > questions.length ) {
       this.props.history.push("/results")
     } else {
-      this.props.history.push(`/question/${}`)
+      this.props.history.push(`/question/${next}`)
     }
   }
   handleChange = (e) => {
