@@ -5,10 +5,11 @@ class Question extends React.Component {
     const question = this.props.question;
 
     return(
-      <div>
-        {question.question}
+      <ol>
+      {question.question}
+        <br></br>
         {question.answers}
-      </div>
+      </ol>
     )
   }
 }

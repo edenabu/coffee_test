@@ -16,5 +16,3 @@ const QuestionList = () => {
 }
 
 export default QuestionList;
-
-// {Questions.map(e => console.log(e))}
