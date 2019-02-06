@@ -1,0 +1,16 @@
+
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2015/10/12/14/54/coffee-983955_1280.jpg");
+  background-size: cover;
+}
+  h1 {
+  color: white;
+}
+
+  h1 {
+    font-family: Georgia;
+  }
+
+  h1 {
+    font-size: 100;
+  }
