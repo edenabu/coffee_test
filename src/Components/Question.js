@@ -5,11 +5,14 @@ class Question extends React.Component {
     const question = this.props.question;
 
     return(
-      <ol>
-      {question.question}
-        <br></br>
-        {question.answers}
-      </ol>
+      <h1>
+      <form>
+        <label> What region are you from? </label>
+        <br/>
+        <input type="radio" name="answer" value="ANSWER" checked />ANSWER<br/>
+        <input type="radio" name="answer" value="ANSWER" checked />ANSWER<br/ >
+      </form>
+      </h1>
     )
   }
 }
