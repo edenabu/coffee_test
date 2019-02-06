@@ -11,11 +11,11 @@ class Question extends React.Component {
     }
   }
 
-  handdleSubmit = (e) => {
+  handleSubmit = (e) => {
     this.props.addAnswer()
   }
-  handdleChange = (e) => {
-    this.setState({selection: e.taget.value})
+  handleChange = (e) => {
+    this.setState({selection: e.target.value})
   }
   componentDidMount(){
     let numQuest = Number(this.props.match.params.number)
@@ -31,7 +31,7 @@ class Question extends React.Component {
         <label> What region are you from? </label>
         <br/>
         <input type="radio" name="answer" value="ANSWER" checked />ANSWER<br/>
-        <input type="radio" name="answer" value="ANSWER" checked />ANSWER<br/ >
+        <input type="radio" name="answer" value="ANSWER" checked />ANSWER<br/>
       </form>
       </h1>
     )
