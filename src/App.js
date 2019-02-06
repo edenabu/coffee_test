@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Question from './Components/Question';
 import Welcome from './Components/Welcome'
+import Results from "./Components/Results"
 
 class App extends Component {
   constructor(){
@@ -23,6 +24,7 @@ class App extends Component {
       < BrowserRouter >
         <div>
           <Route exact path = "/" component = { Welcome } />
+          <Route path = "/results" component = { Results } />
           <Route path = "/question/:number" render = { props => <Question {...props} addAnswer={this.addAnswer}/> } />
         </div>
       < / BrowserRouter >

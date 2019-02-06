@@ -6,15 +6,26 @@ class Question extends React.Component {
   constructor(){
     super()
     this.state = {
-      question: "",
+      question:  {
+          question:"",
+          answers: [],
+          identifier: ""
+      },
       selection: "",
     }
   }
 
-  handdleSubmit = (e) => {
-    this.props.addAnswer()
+  handleSubmit = (e) =>
+    e.preventDefault()
+    this.props.addAnswer(this.state.selection)
+    let next = Number(this.props.match.params.number)+1
+    if(next > questions.length ) {
+      this.props.history.push("/results")
+    } else {
+      this.props.history.push(`/question/${}`)
+    }
   }
-  handdleChange = (e) => {
+  handleChange = (e) => {
     this.setState({selection: e.taget.value})
   }
   componentDidMount(){
@@ -26,14 +37,22 @@ class Question extends React.Component {
     const question = this.state.question;
 
     return(
-      <h1>
-      <form>
-        <label> What region are you from? </label>
-        <br/>
-        <input type="radio" name="answer" value="ANSWER" checked />ANSWER<br/>
-        <input type="radio" name="answer" value="ANSWER" checked />ANSWER<br/ >
+
+      <form onSubmit={this.handleSubmit}>
+        <label> {question.question} </label>
+        {
+          question.answers.map((answer, i) => {
+            return(
+              <div key={i}>
+                <input  type="radio" name="answer" value={answer} onChange={this.handleChange}/>  {answer}
+              </div>
+            )
+          })
+        }
+
+        <input type="submit" name="submit" />
       </form>
-      </h1>
+
     )
   }
 }
