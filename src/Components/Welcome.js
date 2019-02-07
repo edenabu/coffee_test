@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import "./Welcome.css";
 
 class Welcome extends React.Component{
 
@@ -7,7 +8,8 @@ class Welcome extends React.Component{
     return(
         <div>
           <h1> Welcome To Our Coffee Test! </h1>
-          <Link to = "/question/1">start </Link>
+
+          <Link id="start" to = "/question/1"> start </Link>
 
         </div>
     )

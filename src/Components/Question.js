@@ -47,17 +47,19 @@ class Question extends React.Component {
 
       <form onSubmit={this.handleSubmit}>
         <label> {question.question} </label>
-        {
-          question.answers.map((answer, i) => {
-            return(
-              <div key={i}>
-                <input  type="radio" name="answer" value={answer} onChange={this.handleChange}/>  {answer}
-              </div>
-            )
-          })
-        }
+        <div className="center">
+          {
+            question.answers.map((answer, i) => {
+              return(
+                <div key={i}>
+                  <input  type="radio" name="answer" value={answer} onChange={this.handleChange}/>  {answer}
+                </div>
+              )
+            })
+          }
+        </div>
 
-        <input type="submit" name="submit" />
+        <input id="start" type="submit" name="submit" />
       </form>
 
     )
