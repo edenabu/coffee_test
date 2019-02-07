@@ -1,16 +1,49 @@
 
 body {
-  background-image: url("https://cdn.pixabay.com/photo/2015/10/12/14/54/coffee-983955_1280.jpg");
-  background-size: cover;
+  background-image: url("../images/CoffeApp.jpg");
+  background-size: 75% ;
+
 }
   h1 {
   color: white;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3rem;
+  }
+#start{
+  font-size: 1.5rem;
+  border: 1px solid #000;
+  padding: 10px 15px;
+  background-color: #70461a;
+  color: #fff;
+  border-radius:15px;
+  text-decoration: none;
+  margin-bottom: 1rem
+
+}
+#start:active {
+  background-color: #935c24;
+  position: relative;
+  top: 1px;
+ right: 1px;
 }
 
-  h1 {
-    font-family: Georgia;
-  }
+#root {
+  padding: 20px;
+  background-color: rgba(200,200,200,0.5);
+  font-size: 2rem;
 
-  h1 {
-    font-size: 100;
-  }
+}
+
+label {
+  font-size: 3rem
+}
+
+form {
+  text-align: left;
+  width: 50%;
+  margin: auto;
+}
+
+.center {
+  margin-left: 25%
+}
