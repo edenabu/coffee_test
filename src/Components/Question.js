@@ -25,14 +25,21 @@ class Question extends React.Component {
       this.props.history.push(`/question/${next}`)
     }
   }
+
   handleChange = (e) => {
-    this.setState({selection: e.taget.value})
+    this.setState({selection: e.target.value})
   }
+
   componentDidMount(){
+    this.setQuestion()
+  }
+
+  setQuestion(){
     let numQuest = Number(this.props.match.params.number)
     let question = questions[numQuest-1]
     this.setState({question:question})
   }
+
   render() {
     const question = this.state.question;
 

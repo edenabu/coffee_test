@@ -13,7 +13,7 @@ class App extends Component {
       answers:[],
     }
   }
-  addAnswer( answer ) {
+  addAnswer = ( answer ) => {
     let oldAnswers = this.state.answers;
     oldAnswers.push( answer )
     this.setState({ answers: oldAnswers })
