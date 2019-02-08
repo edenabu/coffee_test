@@ -12,6 +12,7 @@ class Question extends React.Component {
           identifier: ""
       },
       selection: "",
+      current: null,
     }
   }
 
@@ -22,6 +23,7 @@ class Question extends React.Component {
     if(next > questions.length ) {
       this.props.history.push("/results")
     } else {
+      this.setQuestion(next);
       this.props.history.push(`/question/${next}`)
     }
   }
@@ -31,11 +33,12 @@ class Question extends React.Component {
   }
 
   componentDidMount(){
-    this.setQuestion()
+    this.setQuestion(this.props.match.params.number);
   }
 
-  setQuestion(){
-    let numQuest = Number(this.props.match.params.number)
+  setQuestion(num){
+    console.log(num);
+    let numQuest = Number(num)
     let question = questions[numQuest-1]
     this.setState({question:question})
   }
@@ -58,8 +61,9 @@ class Question extends React.Component {
             })
           }
         </div>
-
-        <input id="start" type="submit" name="submit" />
+        <div className="button">
+          <input id="start" type="submit" name="submit" />
+        </div>
       </form>
 
     )

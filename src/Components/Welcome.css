@@ -1,7 +1,8 @@
 
 body {
   background-image: url("../images/CoffeApp.jpg");
-  background-size: 75% ;
+  background-size: 100%;
+  background-position: center -100px;
 
 }
   h1 {
@@ -46,4 +47,14 @@ form {
 
 .center {
   margin-left: 25%
+}
+
+.button {
+  text-align: center;
+  margin: 30px;
+}
+
+#result {
+  margin: 50px;
+  margin-top: 50px;
 }
